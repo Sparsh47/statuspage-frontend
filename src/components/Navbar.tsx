@@ -11,7 +11,7 @@ import Link from "next/link";
 export default function Navbar() {
 
     return (
-        <header className="absolute top-0 w-full h-16 border-b border-neutral-800 bg-neutral-900 shadow-sm z-50">
+        <header className="w-full h-16 border-b border-neutral-800 bg-neutral-900 shadow-sm z-50 mb-10">
             <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
                 {/* Brand */}
                 <div className="flex items-center space-x-4 text-sm font-medium text-neutral-100">

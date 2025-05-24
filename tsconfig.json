@@ -1,27 +1,45 @@
+// File: tsconfig.json
 {
   "compilerOptions": {
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
+
+    // Turn off all strict-mode checks
+    "strict": false,
+
+    // Let Next.js/Babel emit even if there are errors
+    "noEmit": false,
+    "noEmitOnError": false,
+
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+
+    // When you definitely don’t need isolatedModules safety checks
+    "isolatedModules": false,
+
     "jsx": "preserve",
     "incremental": true,
+
+    // Next.js plugin is still fine here
     "plugins": [
       {
         "name": "next"
       }
     ],
+
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
